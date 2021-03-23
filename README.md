@@ -1,7 +1,7 @@
 # Aternos AFKBot
 This afk bot will keep your aternos server alive 24/7
 
- Simple for keeping an aternos server alive, or trying to get an AFKBot on your server. IT DOESN'T HAVE TO BE AN ATERNOS SERVER too! It can be any server as long as it's cracked. Uses the mineflayer tool created by MannuG. This bot unlike any other will move around and punch blocks, keeping the server alive. I recommend putting the bot in a bedrock casing to keep it from going everywhere and dying.
+Simple for keeping an aternos server alive, or trying to get an AFKBot on your server. IT DOESN'T HAVE TO BE AN ATERNOS SERVER too! It can be any server as long as it's cracked. Uses the mineflayer tool created by MannuG. This bot unlike any other will move around and punch blocks, keeping the server alive. I recommend putting the bot in a bedrock casing to keep it from going everywhere and dying.
 
 # Setup
 1. Fork this repository, or clone the repository and make it your own

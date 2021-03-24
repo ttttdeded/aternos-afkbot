@@ -21,15 +21,6 @@ What You'll need
 6. Click on the "More" button at the top and click "Restart all Dynos"
 7. Done! Enjoy your free 24/7 aternos server
 
-# Keeping your application alive
-We all know how awesome Heroku is. Simplicity in creating environments for your rails, java, python or php application is just unbelievable.
-Create, deploy, BOOM! Your new app is ready, up and running! But if your site is powered by only 1 dyno, you will quickly notice that after a few hours of app's inactivity, it's first launch takes ages and ages... It is because your dyno was sleeping and now it has to be awakened.
-
-To keep your application alive Please read the following steps
-1. Go to https://wakemydyno.com
-2. Submit your application (eg. APPLICATION_NAME.herokuapp.com)
-3. All done!
-
 # !! CAUTION !!
 Aternos might detect your behavior and they might delete your account!
 

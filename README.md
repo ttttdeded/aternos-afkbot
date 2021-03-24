@@ -13,6 +13,14 @@ IT DOESN'T HAVE TO BE AN ATERNOS SERVER too! It can be any server as long as it'
 6. Click on the "More" button at the top and click "Restart all Dynos"
 7. Done! Enjoy your free 24/7 aternos server
 
+# Requirements
+What You'll need
+
+1. You will need a Heroku account, just a simple free one will do. Sign up at: https://signup.heroku.com/login
+2. An Aternos Server, any Minecraft Server will do, make sure it has "online-mode"set to false
+3. A Github account (obviously)
+4. That's all you need!
+
 # Keeping your application alive
 We all know how awesome Heroku is. Simplicity in creating environments for your rails, java, python or php application is just unbelievable.
 Create, deploy, BOOM! Your new app is ready, up and running! But if your site is powered by only 1 dyno, you will quickly notice that after a few hours of app's inactivity, it's first launch takes ages and ages... It is because your dyno was sleeping and now it has to be awakened.

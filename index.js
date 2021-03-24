@@ -1,5 +1,8 @@
 const mineflayer = require('mineflayer')
 const fs = require('fs');
+const express = require('express'); 
+const app = express();
+app.use(express.static('public'));
 let rawdata = fs.readFileSync('config.json');
 let data = JSON.parse(rawdata);
 var lasttime = -1;
@@ -55,3 +58,8 @@ bot.on('spawn',function() {
     connected=1;
 });
 
+app.get('/', (req, res) => {
+     res.sendFile('index.html', {root: __dirname + '/public/'});
+});
+
+app.listen(process.env.PORT || 5000)

@@ -4,6 +4,14 @@ This afk bot will keep your aternos server alive 24/7
 Simple for keeping an aternos server alive, or trying to get an AFKBot on your server. 
 IT DOESN'T HAVE TO BE AN ATERNOS SERVER too! It can be any server as long as it's cracked. Uses the mineflayer tool created by MannuG. This bot unlike any other will move around and punch blocks, keeping the server alive. I recommend putting the bot in a bedrock casing to keep it from going everywhere and dying.
 
+# Requirements
+What You'll need
+
+1. You will need a Heroku account, just a simple free one will do. Sign up at: https://signup.heroku.com/login
+2. An Aternos Server, any Minecraft Server will do, make sure it has "online-mode"set to false
+3. A Github account (obviously)
+4. That's all you need!
+
 # Setup
 1. Fork this repository, or clone the repository and make it your own
 2. Change the config file to your own aternos server
@@ -12,14 +20,6 @@ IT DOESN'T HAVE TO BE AN ATERNOS SERVER too! It can be any server as long as it'
 5. Select master and click on "Deploy Branch"
 6. Click on the "More" button at the top and click "Restart all Dynos"
 7. Done! Enjoy your free 24/7 aternos server
-
-# Requirements
-What You'll need
-
-1. You will need a Heroku account, just a simple free one will do. Sign up at: https://signup.heroku.com/login
-2. An Aternos Server, any Minecraft Server will do, make sure it has "online-mode"set to false
-3. A Github account (obviously)
-4. That's all you need!
 
 # Keeping your application alive
 We all know how awesome Heroku is. Simplicity in creating environments for your rails, java, python or php application is just unbelievable.

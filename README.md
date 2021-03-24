@@ -8,7 +8,7 @@ IT DOESN'T HAVE TO BE AN ATERNOS SERVER too! It can be any server as long as it'
 What You'll need
 
 1. You will need a Heroku account, just a simple free one will do. Sign up at: https://signup.heroku.com/login
-2. An Aternos Server, any Minecraft Server will do, make sure it has "online-mode"set to false
+2. Any Minecraft Server will do, make sure it has "online-mode"set to false. Mainly Supports Minecraft version 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15 and 1.16.
 3. A Github account (obviously)
 4. That's all you need!
 

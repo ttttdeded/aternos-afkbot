@@ -1,6 +1,5 @@
 const mineflayer = require('mineflayer')
 const fs = require('fs');
-app.use(express.static('public'));
 let rawdata = fs.readFileSync('config.json');
 let data = JSON.parse(rawdata);
 var lasttime = -1;

@@ -23,7 +23,7 @@ What You'll need
 6. Click on the "More" button at the top and click "Restart all Dynos"
 7. Done! Enjoy your free 24/7 aternos server
 
-# ⚠ CAUTION ⚠
+# CAUTION ⚠
 Aternos might detect your behavior and they might delete your account!
 
 You are responsible for your own actions. I do not recommend doing this on your main aternos server!

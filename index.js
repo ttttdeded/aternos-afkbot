@@ -10,9 +10,9 @@ var lastaction;
 var pi = 3.14159;
 var moveinterval = 2; // 2 second movement interval
 var maxrandom = 5; // 0-5 seconds added to movement interval (randomly)
-var host = data["ip"];
-var port = data["port"];
-var username = data["name"]
+var host = data["SurNeth.aternos.me"];
+var port = data["16411"];
+var username = data["BOTe2p"]
 var bot = mineflayer.createBot({
   host: host,
   port: port,

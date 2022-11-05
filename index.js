@@ -1,6 +1,10 @@
 const mineflayer = require('mineflayer')
 const fs = require('fs');
 let rawdata = fs.readFileSync('config.json');
+const express = require('express');
+const { env } = require('process');
+const app = express()
+let PORTT = env.PORT || 3000
 let data = JSON.parse(rawdata);
 var lasttime = -1;
 var moving = 0;
@@ -57,3 +61,10 @@ bot.on('spawn',function() {
     connected=1;
 });
 
+// for heroku
+app.all('/', (req, res) => {
+    res.send("Done.")
+})
+app.listen(PORTT, () => {
+    console.log("Launched port")
+})

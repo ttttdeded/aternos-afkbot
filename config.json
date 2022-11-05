@@ -1,5 +1,5 @@
 {
-	"ip":"YOUR_ATERNOS_SERVER_IP",
-	"port": "YOUR_ATERNOS_SERVER_PORT",
+	"ip":"",
+	"port": "",
 	"name": "BOT_NAME"
 }

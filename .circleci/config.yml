@@ -1,30 +1,21 @@
-############################################################
-# +------------------------------------------------------+ #
-# |         AntiLagSystem v1.1 Beta by Niklas409         | #
-# +------------------------------------------------------+ #
-############################################################
+# This config is equivalent to both the '.circleci/extended/orb-free.yml' and the base '.circleci/config.yml'
+version: 2.1
 
-Config:
-#Gib ein Prefix für das Plugin an.
-  Prefix: '&4&lAntiLagSystem &8» &r'
-#Gib eine Nachricht an die kommt, wenn ein Spieler die benötigten Rechte nicht hat.
-  NoPerms: '&cDazu hast du keine Rechte!'
-#Soll das Plugin Items auf dem Boden nach Zeit entfernen? // Ja [oder] Nein
-  ClearItems: 'Ja'
-#Soll das Plugin Mobs nach Zeit entfernen? // Ja [oder] Nein
-  ClearMobs: 'Nein'
-#Was soll bei Stufe 1 deaktiviert werden? [Unter 15 TPS]
-  Fly: 'Ja'
-  Fallschaden: 'Ja'
-#Welche Plugins sollen bei Stufe 2 deaktiviert werden? (Müssen bei Ja auf dem Server sein) [Unter 10 TPS]
-  EchoPet: 'Nein'
-  SuperTrails: 'Nein'
-#Welche Befehle sollen bei Stufe 2 deaktiviert werden? [Unter 10 TPS]
-  StartKick: 'Ja'
-  mutep: 'Ja'
-  tpa: 'Ja'
-  tp: 'Ja'
-#Was soll bei Stufe 3 deaktiviert werden? [Unter 5 TPS]
-  Redstone: 'Ja'
-#Welche Befehle sollen bei Stufe 3 deaktiviert werden? [Unter 5 TPS]
-  MSG: 'Ja'
+# Orbs are reusable packages of CircleCI configuration that you may share across projects, enabling you to create encapsulated, parameterized commands, jobs, and executors that can be used across multiple projects.
+# See: https://circleci.com/docs/2.0/orb-intro/
+orbs:
+  node: circleci/node@4.7
+
+# Invoke jobs via workflows
+# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
+workflows:
+  sample: # This is the name of the workflow, feel free to change it to better match your workflow.
+    # Inside the workflow, you define the jobs you want to run.
+    jobs:
+      - node/test:
+          # This is the node version to use for the `cimg/node` tag
+          # Relevant tags can be found on the CircleCI Developer Hub
+          # https://circleci.com/developer/images/image/cimg/node
+          version: '16.10'
+          # If you are using yarn, change the line below from "npm" to "yarn"
+          pkg-manager: npm

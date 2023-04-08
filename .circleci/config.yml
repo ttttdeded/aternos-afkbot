@@ -1,26 +1,30 @@
-# Use the latest 2.1 version of CircleCI pipeline process engine.
-# See: https://circleci.com/docs/configuration-reference
-version: 2.1
+############################################################
+# +------------------------------------------------------+ #
+# |         AntiLagSystem v1.1 Beta by Niklas409         | #
+# +------------------------------------------------------+ #
+############################################################
 
-# Define a job to be invoked later in a workflow.
-# See: https://circleci.com/docs/configuration-reference/#jobs
-jobs:
-  say-hello:
-    # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
-    # See: https://circleci.com/docs/configuration-reference/#executor-job
-    docker:
-      - image: cimg/base:stable
-    # Add steps to the job
-    # See: https://circleci.com/docs/configuration-reference/#steps
-    steps:
-      - checkout
-      - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
-
-# Orchestrate jobs using workflows
-# See: https://circleci.com/docs/configuration-reference/#workflows
-workflows:
-  say-hello-workflow:
-    jobs:
-      - say-hello
+Config:
+#Gib ein Prefix für das Plugin an.
+  Prefix: '&4&lAntiLagSystem &8» &r'
+#Gib eine Nachricht an die kommt, wenn ein Spieler die benötigten Rechte nicht hat.
+  NoPerms: '&cDazu hast du keine Rechte!'
+#Soll das Plugin Items auf dem Boden nach Zeit entfernen? // Ja [oder] Nein
+  ClearItems: 'Ja'
+#Soll das Plugin Mobs nach Zeit entfernen? // Ja [oder] Nein
+  ClearMobs: 'Nein'
+#Was soll bei Stufe 1 deaktiviert werden? [Unter 15 TPS]
+  Fly: 'Ja'
+  Fallschaden: 'Ja'
+#Welche Plugins sollen bei Stufe 2 deaktiviert werden? (Müssen bei Ja auf dem Server sein) [Unter 10 TPS]
+  EchoPet: 'Nein'
+  SuperTrails: 'Nein'
+#Welche Befehle sollen bei Stufe 2 deaktiviert werden? [Unter 10 TPS]
+  StartKick: 'Ja'
+  mutep: 'Ja'
+  tpa: 'Ja'
+  tp: 'Ja'
+#Was soll bei Stufe 3 deaktiviert werden? [Unter 5 TPS]
+  Redstone: 'Ja'
+#Welche Befehle sollen bei Stufe 3 deaktiviert werden? [Unter 5 TPS]
+  MSG: 'Ja'

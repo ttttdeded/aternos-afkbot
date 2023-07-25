@@ -11,6 +11,6 @@
   "dependencies": {
     "config": "^3.3.3",
     "fs": "0.0.1-security",
-    "mineflayer": "^2.37.1"
+    "mineflayer": "^4.10.1"
   }
 }

@@ -1,22 +1,18 @@
 const mineflayer = require("mineflayer");
-let data = require("./config.json");
-var lasttime = -1;
-var moving = 0;
-var connected = 0;
-var actions = ["forward", "back", "left", "right"];
-var lastaction;
-var moveinterval = 2; // 2 second movement interval
-var maxrandom = 5; // 0-5 seconds added to movement interval (randomly)
-console.log(data);
+const config = require("./config.json");
+let lasttime = -1;
+let moving = 0;
+let connected = 0;
+const actions = ["forward", "back", "left", "right"];
+let lastaction;
+let moveinterval = 2; // 2 second movement interval
+let maxrandom = 5; // 0-5 seconds added to movement interval (randomly)
 const bot = mineflayer.createBot({
-    host: "gecko.aternos.host",
-    port: 50063,
-    username: "fuck_reza",
+    host: config.ip,
+    port: config.port,
+    username: "afk_bot",
     hideErrors: false,
 });
-function getRandomArbitrary(min, max) {
-    return Math.random() * (max - min) + min;
-}
 bot.on("login", function () {
     console.log("Logged In");
 });
@@ -27,16 +23,16 @@ bot.on("time", function () {
     if (lasttime < 0) {
         lasttime = bot.time.age;
     } else {
-        var randomadd = Math.random() * maxrandom * 20;
-        var interval = moveinterval * 20 + randomadd;
+        const randomadd = Math.random() * maxrandom * 20;
+        const interval = moveinterval * 20 + randomadd;
         if (bot.time.age - lasttime > interval) {
             if (moving == 1) {
                 bot.setControlState(lastaction, false);
                 moving = 0;
                 lasttime = bot.time.age;
             } else {
-                var yaw = Math.random() * Math.PI - 0.5 * Math.PI;
-                var pitch = Math.random() * Math.PI - 0.5 * Math.PI;
+                const yaw = Math.random() * Math.PI - 0.5 * Math.PI;
+                const pitch = Math.random() * Math.PI - 0.5 * Math.PI;
                 bot.look(yaw, pitch, false);
                 lastaction =
                     actions[Math.floor(Math.random() * actions.length)];
@@ -54,7 +50,4 @@ bot.on("spawn", function () {
 });
 
 bot.on("kicked", console.log);
-bot.on("error", (e) => {
-    console.log(e);
-    console.log("error");
-});
+bot.on("error", console.log);
